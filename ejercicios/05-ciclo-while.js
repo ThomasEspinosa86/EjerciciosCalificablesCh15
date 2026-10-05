@@ -17,8 +17,20 @@
 // ============================================================
 
 function diasDeInventario(stock, ventaDiaria) {
-  // Tu código aquí
+  let contador = 0;
+  while(stock >0){
+    stock -= ventaDiaria;
+    contador += 1;
+    if(ventaDiaria <= 0){
+      contador = -1;
+      break;
+    }
+    
+  }
+return contador;
 }
+
+console.log(diasDeInventario(50,0));
 
 // No borres esta línea: es la puerta por donde el test usa tu función
 module.exports = { diasDeInventario };
